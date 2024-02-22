@@ -3,7 +3,6 @@ kind: HorizontalPodAutoscaler
 metadata:
   creationTimestamp: "2024-02-22T11:41:03Z"
   name: pacman
-  namespace: pacman
   resourceVersion: "478"
   uid: 59215208-f10d-48c4-a534-842912f229f5
 spec:
