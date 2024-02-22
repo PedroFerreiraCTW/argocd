@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: pacman
+  name: pacman
+  namespace: pacman
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pacman
+  template:
+    metadata:
+      labels:
+        app: pacman
+    spec:
+      containers:
+      - name: pacman
+        image: ghcr.io/pedroferreiractw/pacman:2.0
+        resources:
+          requests:
+            cpu: 1m
