@@ -1,10 +1,7 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  creationTimestamp: "2024-02-22T11:41:03Z"
   name: pacman
-  resourceVersion: "478"
-  uid: 59215208-f10d-48c4-a534-842912f229f5
 spec:
   maxReplicas: 5
   minReplicas: 1
@@ -13,6 +10,3 @@ spec:
     kind: Deployment
     name: pacman
   targetCPUUtilizationPercentage: 1
-status:
-  currentReplicas: 0
-  desiredReplicas: 0
