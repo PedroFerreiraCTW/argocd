@@ -5,8 +5,10 @@ metadata:
   labels:
     run: pacman
 spec:
+  type: ClusterIP
   ports:
   - port: 80
+    targetPort: 80
     protocol: TCP
   selector:
     run: pacman
