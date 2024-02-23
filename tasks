@@ -6,3 +6,15 @@ tasks
     - k apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
     - k port-forward svc/argocd-server -n argocd 8080:80
     - k get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d; echo
+    - ab -n 1000 -c 10 -r pacman.local/
+
+
+--> 2
+
+    - k get application -n argocd -oyaml > app.yml
+
+
+--> tunnel
+
+    minikube addons disable ingress
+    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.5/deploy/static/provider/cloud/deploy.yaml

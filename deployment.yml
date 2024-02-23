@@ -16,6 +16,8 @@ spec:
     spec:
       containers:
       - name: pacman
+        ports:
+        - containerPort: 80
         image: ghcr.io/pedroferreiractw/pacman:2.0
         resources:
           requests:

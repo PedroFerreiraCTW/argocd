@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: pacman
   annotations:
-     nginx.ingress.kubernetes.io/rewrite-target: /$1
+     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   ingressClassName: nginx
   rules:
@@ -16,4 +16,4 @@ spec:
               service:
                 name: pacman
                 port:
-                  number: 8080
+                  number: 80
